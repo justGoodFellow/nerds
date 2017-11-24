@@ -1,0 +1,186 @@
+extend ./layouts/base.pug
+
+block content
+  section.catalog
+    .catalog__header
+      h2.catalog__title
+        | Магазин готовых шаблонов
+    .catalog__wrapper
+      .catalog__inner-col
+        form.catalog__filters
+          .catalog__filters-group
+            h3.catalog__filters-title
+              | Стоимость:
+            div
+              div
+                label(for='from')
+                  | От
+                input(id='from', type='number', value='0')
+              div
+                label(for='to')
+                  | До
+                input(id='to', type='number', value='15000')
+          .catalog__filters-group
+            h3.catalog__filters-title
+              | Сетка:
+            div
+              label.catalog__filters-selection
+                input(type='radio', name='grid')
+                | Адаптивная
+              label.catalog__filters-selection
+                input(type='radio', name='grid')
+                | Фиксированная
+              label.catalog__filters-selection
+                input(type='radio', name='grid')
+                | Резиновая
+          .catalog__filters-group
+            h3.catalog__filters-title
+              | Особенности:
+            div
+              label.catalog__filters-selection
+                input(type='checkbox', checked)
+                | Слайдер
+              label.catalog__filters-selection
+                input(type='checkbox')
+                | Блок преимуществ
+              label.catalog__filters-selection
+                input(type='checkbox', checked)
+                | Новости
+              label.catalog__filters-selection
+                input(type='checkbox')
+                | Галерея
+              label.catalog__filters-selection
+                input(type='checkbox')
+                | Корзина
+          button.btn(type='submit')
+            | Показать
+      .catalog__inner-col
+        .catalog__sort
+          h3.catalog__sort-title
+            | Сортировать:
+          ul.catalog__sort-items
+            li.catalog__sort-item
+              button.catalog__sort-btn
+                | По цене
+            li.catalog__sort-item
+              button.catalog__sort-btn
+                | По типу
+            li.catalog__sort-item
+              button.catalog__sort-btn
+                | По названию
+            li.catalog__sort-item
+              button.catalog__sort-btn
+                | Прямой порядок
+            li.catalog__sort-item
+              button.catalog__sort-btn
+                | Обратный порядок
+        .catalog__items
+          .catalog__item
+            .catalog__item-img-wrapper
+              img(src='img/site-1.jpg', width='360', height='576', alt='Sedona')
+            .catalog__item-content
+              h3.catalog__item-title
+                | Sedona
+              p.catalog__item-desc
+                | Информационный сайт для туристов
+              button.catalog__buy-btn.btn
+                | 9900 руб.
+          .catalog__item
+            .catalog__item-img-wrapper
+              img(src='img/site-2.jpg', width='360', height='576', alt='Pink app')
+            .catalog__item-content
+              h3.catalog__item-title
+                | Pink app
+              p.catalog__item-desc
+                | Продуктовый лендинг приложения для iOS и Android
+              button.catalog__buy-btn.btn
+                | 9900 руб.
+          .catalog__item
+            .catalog__item-img-wrapper
+              img(src='img/site-3.jpg', width='360', height='576', alt='Barbershop')
+            .catalog__item-content
+              h3.catalog__item-title
+                | Barbershop
+              p.catalog__item-desc
+                | Сайт салоны красоты. Для мужчин, да.
+              button.catalog__buy-btn.btn
+                | 9900 руб.
+          .catalog__item
+            .catalog__item-img-wrapper
+              img(src='img/site-4.jpg', width='360', height='576', alt='Mishka')
+            .catalog__item-content
+              h3.catalog__item-title
+                | Mishka
+              p.catalog__item-desc
+                | Интернет-магазин вязаных игрушек
+              button.catalog__buy-btn.btn
+                | 9900 руб.
+          .catalog__item
+            .catalog__item-img-wrapper
+              img(src='img/site-5.jpg', width='360', height='576', alt='A plus')
+            .catalog__item-content
+              h3.catalog__item-title
+                | A plus
+              p.catalog__item-desc
+                | Лендинг курсов повышения квалификации
+              button.catalog__buy-btn.btn
+                | 9900 руб.
+          .catalog__item
+            .catalog__item-img-wrapper
+              img(src='img/site-6.jpg', width='360', height='576', alt='Кваст')
+            .catalog__item-content
+              h3.catalog__item-title
+                | Кваст
+              p.catalog__item-desc
+                | Промо-сайт производителя крафтового кваса
+              button.catalog__buy-btn.btn
+                | 9900 руб.
+        .catalog__nav
+          ul.catalog__nav-items
+            li.catalog__nav-item
+              button.catalog__nav-btn
+                | 1
+            li.catalog__nav-item
+              button.catalog__nav-btn
+                | 2
+            li.catalog__nav-item
+              button.catalog__nav-btn
+                | 3
+          button.catalog__nav-next.btn
+            | Следующая
+  section.contacts
+    .contacts__map
+      .contacts__map-wrapper
+        img(src='map.jpg', width='1440', height='416', alt='Карта')
+    .contacts__wrapper
+      .contacts__inner
+        h2.contacts__title
+          | Nёrds design studio
+        span.contacts__addr
+          | 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        a.contacts__phone(href='tel:+78122757575')
+          | тел. +7 (812) 275-75-75
+        button.contacts__btn.btn
+          | Напишите нам
+    .contacts__feedback.feedback
+      .feedback__header
+        h2.feedback__title
+          | Напишите нам
+        button.feedback__close
+          | Закрыть
+      form.feedback__form
+        .feedback__items
+          .feedback__item
+            label.feedback__label(for='name')
+              | Ваше имя:
+            input.feedback__field(id='name', placeholder='Представьтесь, пожалуйста')
+          .feedback__item
+            label.feedback__label(for='email')
+              | Ваш e-mail:
+            input.feedback__field(id='email', type='email', placeholder='Для отправки ответа')
+          .feedback__item
+            label.feedback__label(for='text')
+              | Текст письма:
+            textarea.feedback__field(id='text', placeholder='В свободной форме')
+        button.feedback__send.btn(type='submit')
+          | Отправить
