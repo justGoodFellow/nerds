@@ -27,13 +27,13 @@ block content
             a.promo__btn.btn(href='#')
               | Узнать больше
         .slider__controls
-          button.slider__control
+          button.slider__control(type='button')
             span
               | 1
-          button.slider__control
+          button.slider__control(type='button')
             span
               | 2
-          button.slider__control
+          button.slider__control(type='button')
             span
               | 3
   section.services
@@ -68,49 +68,48 @@ block content
             | Заказать
   section.info
     .info__wrapper
-      .info__items
-        .info__item
-          h2.info__title
-            | Мы — маленькая, но гордая дизайн-студия из Краснодара.
-          p.info__desc
-            | Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
-          .info__work
-            h3.info__work-title
+      .info__about-us
+        h2.info__title
+          | Мы — маленькая, но гордая дизайн-студия из Краснодара.
+        p.info__desc
+          | Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+        .info__work
+          h3.info__work-title
+            | Выполняем заказы на разработку:
+          ul.info__work-items
+            li.info__work-item
               | Выполняем заказы на разработку:
-            ul.info__work-items
-              li.info__work-item
-                | Выполняем заказы на разработку:
-              li.info__work-item
-                | Мобильных приложений для iOS и Android
-              li.info__work-item
-                | Слайдшоу и видео для корпоративных презентаций
-        .info__features
-          .info__logo
-            img(src='img/logo-2.png', width='360', height='208', alt='Логотип')
-          span.info__features-desc
-            | С 2004 года любим точность во всем:
-          .info__features-items
-            .info__features-item
-              span.info__features-item-number
-                | 146
-                sup
-                  | %
-              span.info__features-item-desc
-                | Уровень самоотдачи
-            .info__features-item
-              span.info__features-item-number
-                | 146
-                sup
-                  | %
-              span.info__features-item-desc
-                | Соблюдение сроков
-            .info__features-item
-              span.info__features-item-number
-                | 50
-                sup
-                  | %
-              span.info__features-item-desc
-                | Минимальная предоплата
+            li.info__work-item
+              | Мобильных приложений для iOS и Android
+            li.info__work-item
+              | Слайдшоу и видео для корпоративных презентаций
+      .info__features
+        .info__logo
+          img(src='img/logo-2.png', width='360', height='208', alt='Логотип')
+        span.info__features-desc
+          | С 2004 года любим точность во всем:
+        .info__features-items
+          .info__features-item
+            span.info__features-item-number
+              | 146
+              sup
+                | %
+            span.info__features-item-desc
+              | Уровень самоотдачи
+          .info__features-item
+            span.info__features-item-number
+              | 146
+              sup
+                | %
+            span.info__features-item-desc
+              | Соблюдение сроков
+          .info__features-item
+            span.info__features-item-number
+              | 50
+              sup
+                | %
+            span.info__features-item-desc
+              | Минимальная предоплата
   .examples
     .examples__wrapper
       .examples__items
@@ -128,19 +127,21 @@ block content
         img(src='img/map.jpg', width='1440', height='416', alt='Карта')
     .contacts__wrapper
       .contacts__inner
-        h2.contacts__title
+        h1.contacts__title
           | Nёrds design studio
         span.contacts__addr
-          | 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          | 191186, Санкт-Петербург,
+          br
+          | ул. Б. Конюшенная, д. 19/8
         a.contacts__phone(href='tel:+78122757575')
           | тел. +7 (812) 275-75-75
-        button.contacts__btn.btn
+        button.contacts__btn.btn(type='button')
           | Напишите нам
     .contacts__feedback.feedback
       .feedback__header
         h2.feedback__title
           | Напишите нам
-        button.feedback__close
+        button.feedback__close(type='button')
           | Закрыть
       form.feedback__form
         .feedback__items

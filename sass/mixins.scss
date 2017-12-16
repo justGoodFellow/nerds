@@ -1,0 +1,9 @@
+@mixin container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@mixin container--big {
+  width: 1440px;
+  margin: 0 auto;
+}

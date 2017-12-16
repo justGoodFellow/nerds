@@ -1,0 +1,15 @@
+.info__wrapper {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+}
+.info__about-us {
+  width: 660px;
+}
+.info__features {
+  width: 360px;
+}
+.info__features-items {
+  display: flex;
+}

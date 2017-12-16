@@ -1,0 +1,13 @@
+.page-footer__wrapper {
+  @include container
+
+  display: flex;
+}
+.page-footer__social-links {
+  margin-right: 140px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}

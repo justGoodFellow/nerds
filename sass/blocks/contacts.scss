@@ -1,0 +1,23 @@
+.contacts__map {
+  @include container--big;
+}
+.contacts__wrapper {
+  @include container;
+}
+.contacts__inner {
+  width: 320px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.feedback {
+  @include container;
+
+  box-sizing: border-box;
+  width: 960px;
+  padding: 70px 100px;
+}
+.feedback__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

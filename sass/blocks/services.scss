@@ -1,0 +1,13 @@
+.services__wrapper {
+  @include container;
+}
+.services__items {
+  display: flex;
+}
+.services__item {
+  width: 300px;
+  margin-right: 100px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

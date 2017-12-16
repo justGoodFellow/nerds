@@ -1,0 +1,7 @@
+.examples__wrapper {
+  @include container;
+}
+.examples__items {
+  display: flex;
+  justify-content: space-around;
+}
