@@ -1,7 +1,54 @@
+.examples {
+  margin-bottom: 80px;
+}
 .examples__wrapper {
   @include container;
 }
 .examples__items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  // align-items: center;
+  padding-bottom: 40px;
+
+  border-bottom: 2px solid $gray--lighten;
+}
+.examples__item {
+  position: relative;
+
+  display: flex;
+  width: 260px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -20px;
+
+    width: 2px;
+    height: 50px;
+    margin-top: -25px;
+
+    background-color: $gray--lighten;
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+  img {
+    margin: auto;
+
+    opacity: 0.2;
+  }
+  &:hover,
+  &:focus {
+    outline: none;
+    img {
+      opacity: 1;
+    }
+  }
+  &:active {
+    img {
+      opacity: 0.1;
+    }
+  }
 }

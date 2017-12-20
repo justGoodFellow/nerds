@@ -4,6 +4,7 @@
   padding: 0 20px;
 }
 @mixin container--big {
-  width: 1440px;
+  min-width: 1160px;
+  max-width: 1440px;
   margin: 0 auto;
 }
