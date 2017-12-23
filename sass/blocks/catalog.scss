@@ -46,7 +46,7 @@
   border: 1px solid #000000;
 }
 .catalog__filters-btn {
-  margin-top: 20px;;
+  margin-top: 15px;;
 }
 
 .radiobox__input,
@@ -58,7 +58,13 @@
     }
   }
 }
-
+.checkbox__input {
+  &:checked ~ .catalog__filters-selection {
+    &::before {
+      border-color: transparent;
+    }
+  }
+}
 .radiobox__label,
 .checkbox__label {
   position: relative;
@@ -71,6 +77,10 @@
 
   cursor: pointer;
 
+  &::before,
+  &::after {
+    opacity: 0.4;
+  }
   &::before {
     content: '';
 
@@ -82,30 +92,21 @@
     margin-right: 10px;
 
     border-style: solid;
-    border-color: $gray;
+    border-color: $gray--darken;
   }
   &::after {
     content: '';
     position: absolute;
-    top: 8px;
-    left: 8px;
 
     display: none;
-    width: 8px;
-    height: 8px;
-
-    background-color: $gray;
-    border-radius: 50%;
   }
 
   &:hover {
     color: black;
 
-    &::before {
-      border-color: $gray--darken;
-    }
+    &::before,
     &::after {
-      background-color: $gray--darken;
+      opacity: 1;
     }
   }
   &:active {
@@ -118,11 +119,42 @@
     border-width: 3px;
     border-radius: 50%;
   }
+  &::after {
+    top: 8px;
+    left: 8px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: $gray--darken;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $gray--darken;
+    }
+  }
 }
 .checkbox__label {
+  margin: 18px 0;
   &::before {
+    width: 23px;
+    height: 22px;
+
     border-width: 2px;
-    border-radius: 3px;
+    border-radius: 4px;
+  }
+  &::after {
+    top: 0;
+    left: 0;
+
+    width: 27px;
+    height: 23px;
+
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    background-position: -10px -45px;
   }
 }
 

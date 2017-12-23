@@ -36,19 +36,20 @@
   text-transform: uppercase;
   text-decoration: none;
   &--cart {
-    position: relative;
-
     padding-right: 0;
-    padding-left: 40px;
     &::before {
       content: '';
-      position: absolute;
-      left: 0;
 
+      display: inline-block;
       width: 15px;
       height: 15px;
+      margin-right: 25px;
 
-      background-color: red;
+      vertical-align: top;
+
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+      background-position: -10px -10px;
     }
   }
   &:hover,
