@@ -39,11 +39,8 @@
 }
 
 .catalog__filters-cost {
-  min-height: 130px;
   margin-top: 50px;
   margin-bottom: 25px;
-
-  border: 1px solid #000000;
 }
 .catalog__filters-btn {
   margin-top: 15px;;
@@ -52,6 +49,24 @@
 .radiobox__input,
 .checkbox__input {
   display: none;
+
+  &:disabled {
+    & ~ .radiobox__label,
+    & ~ .checkbox__label {
+      color: black;
+
+      cursor: default;
+      opacity: 0.3;
+      &::before {
+        border-color: $gray--darken;
+        opacity: 0.3;
+      }
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
   &:checked ~ .catalog__filters-selection {
     &::after {
       display: block;
@@ -178,7 +193,7 @@
 .catalog__sort-item {
   display: flex;
   align-items: center;
-  margin: 0 9px;
+  margin: 0 8px;
 
   &:last-child {
     margin-right: 0;
@@ -213,12 +228,18 @@
   }
 
   &--arrow {
-    width: 10px;
-    height: 10px;
+    width: 0;
+    height: 0;
+    padding: 0;
 
     font-size: 0;
 
-    background-color: red;
+    border-width: 9px 4.5px 0 4.5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  &--up {
+    transform: rotate(180deg)
   }
 }
 .catalog__items {

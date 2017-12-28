@@ -1,199 +1,201 @@
-extend ./layouts/base.pug
-
-block content
-  section.catalog
-    .catalog__header
-      .catalog__header-wrap
-        h2.catalog__title
-          | Магазин готовых шаблонов
-    .catalog__wrapper
-      form.catalog__filters
-        fieldset.catalog__filters-group
-          legend
-            h3.catalog__filters-title.catalog__legend
-              | Стоимость:
-          .catalog__filters-cost
-            div
-              label(for='from')
-                | От
-              input(id='from', type='number', value='0')
-            div
-              label(for='to')
-                | До
-              input(id='to', type='number', value='15000')
-        fieldset.catalog__filters-group
-          legend
-            h3.catalog__filters-title.catalog__legend
-              | Сетка:
-          div
-            .radiobox
-              input.radiobox__input(type='radio', id='adaptive', name='grid', checked)
-              label.catalog__filters-selection.radiobox__label(for='adaptive')
-                | Адаптивная
-            .radiobox
-              input.radiobox__input(type='radio', id='fixed', name='grid')
-              label.catalog__filters-selection.radiobox__label(for='fixed')
-                | Фиксированная
-            .radiobox
-              input.radiobox__input(type='radio', id='fluid', name='grid')
-              label.catalog__filters-selection.radiobox__label(for='fluid')
-                | Резиновая
-        fieldset.catalog__filters-group
-          legend
-            h3.catalog__filters-title.catalog__legend
-              | Особенности:
-          div
-            .checkbox
-              input.checkbox__input(type='checkbox', id='slider', checked)
-              label.catalog__filters-selection.checkbox__label(for='slider')
-                | Слайдер
-            .checkbox
-              input.checkbox__input(type='checkbox', id='advantages')
-              label.catalog__filters-selection.checkbox__label(for='advantages')
-                | Блок преимуществ
-            .checkbox
-              input.checkbox__input(type='checkbox', id='news', checked)
-              label.catalog__filters-selection.checkbox__label(for='news')
-                | Новости
-            .checkbox
-              input.checkbox__input(type='checkbox', id='gallery')
-              label.catalog__filters-selection.checkbox__label(for='gallery')
-                | Галерея
-            .checkbox
-              input.checkbox__input(type='checkbox', id='cart')
-              label.catalog__filters-selection.checkbox__label(for='cart')
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title
+      | Nerds
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    link(rel='stylesheet', href='css/style.min.css')
+  body
+    header.page-header
+      .page-header__wrapper
+        a.page-header__logo(href='index.html')
+          img(src='img/logo.png', width='160', height='65', alt='Логотип')
+        nav.main-nav
+          ul.main-nav__items.main-nav__items--main
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Студия
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Клиенты
+            li.main-nav__item.main-nav__item--active
+              a.main-nav__link
+                | Магазин
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Контакты
+          ul.main-nav__items.main-nav__items--user
+            li.main-nav__item
+              a.main-nav__link.main-nav__link--cart(href='#')
                 | Корзина
-        button.catalog__filters-btn.btn.btn--gray(type='submit')
-          | Показать
-      .catalog__content
-        .catalog__sort
-          h3.catalog__legend
-            | Сортировать:
-          ul.catalog__sort-items
-            li.catalog__sort-item.catalog__sort-item--active
-              button.catalog__sort-btn(type='button', tabindex='-1')
-                | По цене
-            li.catalog__sort-item
-              button.catalog__sort-btn(type='button')
-                | По типу
-            li.catalog__sort-item
-              button.catalog__sort-btn(type='button')
-                | По названию
-            li.catalog__sort-item
-              button.catalog__sort-btn.catalog__sort-btn--arrow(type='button')
-                | Прямой порядок
-            li.catalog__sort-item
-              button.catalog__sort-btn.catalog__sort-btn--arrow(type='button')
-                | Обратный порядок
-        .catalog__items
-          .catalog__item
-            .catalog__item-img-wrapper
-              img(src='img/site-sedona.jpg', width='360', height='576', alt='Sedona')
-            .catalog__item-content
-              h3.catalog__item-title
-                | Sedona
-              p.catalog__item-desc
-                | Информационный сайт для туристов
-              button.catalog__buy-btn.btn(type='button', tabindex='-1')
-                | 9900 руб.
-          .catalog__item
-            .catalog__item-img-wrapper
-              img(src='img/site-pink.jpg', width='360', height='576', alt='Pink app')
-            .catalog__item-content
-              h3.catalog__item-title
-                | Pink app
-              p.catalog__item-desc
-                | Продуктовый лендинг приложения для iOS и Android
-              button.catalog__buy-btn.btn(type='button', tabindex='-1')
-                | 9900 руб.
-          .catalog__item
-            .catalog__item-img-wrapper
-              img(src='img/site-barbershop.jpg', width='360', height='576', alt='Barbershop')
-            .catalog__item-content
-              h3.catalog__item-title
-                | Barbershop
-              p.catalog__item-desc
-                | Сайт салоны красоты. Для мужчин, да.
-              button.catalog__buy-btn.btn(type='button', tabindex='-1')
-                | 9900 руб.
-          .catalog__item
-            .catalog__item-img-wrapper
-              img(src='img/site-mishka.jpg', width='360', height='576', alt='Mishka')
-            .catalog__item-content
-              h3.catalog__item-title
-                | Mishka
-              p.catalog__item-desc
-                | Интернет-магазин вязаных игрушек
-              button.catalog__buy-btn.btn(type='button', tabindex='-1')
-                | 9900 руб.
-          .catalog__item
-            .catalog__item-img-wrapper
-              img(src='img/site-aplus.jpg', width='360', height='576', alt='A plus')
-            .catalog__item-content
-              h3.catalog__item-title
-                | A plus
-              p.catalog__item-desc
-                | Лендинг курсов повышения квалификации
-              button.catalog__buy-btn.btn(type='button', tabindex='-1')
-                | 9900 руб.
-          .catalog__item
-            .catalog__item-img-wrapper
-              img(src='img/site-kvast.jpg', width='360', height='576', alt='Кваст')
-            .catalog__item-content
-              h3.catalog__item-title
-                | Кваст
-              p.catalog__item-desc
-                | Промо-сайт производителя крафтового кваса
-              button.catalog__buy-btn.btn(type='button', tabindex='-1')
-                | 9900 руб.
-        .catalog__nav
-          ul.catalog__nav-items
-            li.catalog__nav-item.catalog__nav-item--active
-              button.catalog__nav-btn.btn.btn--gray(type='button', tabindex='-1')
-                | 1
-            li.catalog__nav-item
-              button.catalog__nav-btn.btn.btn--gray(type='button')
-                | 2
-            li.catalog__nav-item
-              button.catalog__nav-btn.btn.btn--gray(type='button')
-                | 3
-          button.catalog__nav-next.btn.btn--gray(type='button')
-            | Следующая
-  section.contacts
-    .contacts__wrap
-      .contacts__content
-        h1.contacts__title
-          | Nёrds design studio
-        span.contacts__addr
-          | 191186, Санкт-Петербург,
-          br
-          | ул. Б. Конюшенная, д. 19/8
-        a.contacts__phone(href='tel:+78122757575')
-          | тел. +7 (812) 275-75-75
-        button.contacts__btn.btn(type='button')
-          | Напишите нам
-      .contacts__feedback.feedback
-        .feedback__header
-          h2.feedback__title
-            | Напишите нам
-          button.feedback__close(type='button')
-            | Закрыть
-        form.feedback__form
-          .feedback__items
-            .feedback__item-group
-              .feedback__item
-                label.feedback__label(for='name')
-                  | Ваше имя:
-                input.feedback__field(id='name', placeholder='Представьтесь, пожалуйста', required)
-              .feedback__item
-                label.feedback__label(for='email')
-                  | Ваш e-mail:
-                input.feedback__field(id='email', type='email', placeholder='Для отправки ответа', required)
-            .feedback__item
-              label.feedback__label(for='text')
-                | Текст письма:
-              textarea.feedback__field(id='text', placeholder='В свободной форме', required)
-          button.feedback__send.btn(type='submit')
-            | Отправить
-    .contacts__map
-      img(src='img/map.jpg', width='1440', height='416', alt='Карта')
+
+    main
+      section.catalog
+        .catalog__header
+          .catalog__header-wrap
+            h2.catalog__title
+              | Магазин готовых шаблонов
+        .catalog__wrapper
+          form.catalog__filters
+            fieldset.catalog__filters-group
+              legend
+                h3.catalog__filters-title.catalog__legend
+                  | Стоимость:
+              .catalog__filters-cost.range-filter
+                .range-filter__range-controls
+                  .range-filter__scale
+                    .range-filter__bar(style='width: 70%;')
+                    .range-filter__toggle.range-filter__min-toggle
+                    .range-filter__toggle.range-filter__max-toggle
+                .range-filter__price-controls
+                  .range-filter__min-price
+                    label(for='from')
+                      | От
+                    input(id='from', type='text', value='0')
+                  .range-filter__max-price
+                    label(for='to')
+                      | До
+                    input(id='to', type='text', value='15000')
+            fieldset.catalog__filters-group
+              legend
+                h3.catalog__filters-title.catalog__legend
+                  | Сетка:
+              div
+                .radiobox
+                  input.radiobox__input(type='radio', id='adaptive', name='grid', checked)
+                  label.catalog__filters-selection.radiobox__label(for='adaptive')
+                    | Адаптивная
+                .radiobox
+                  input.radiobox__input(type='radio', id='fixed', name='grid')
+                  label.catalog__filters-selection.radiobox__label(for='fixed')
+                    | Фиксированная
+                .radiobox
+                  input.radiobox__input(type='radio', id='fluid', name='grid')
+                  label.catalog__filters-selection.radiobox__label(for='fluid')
+                    | Резиновая
+            fieldset.catalog__filters-group
+              legend
+                h3.catalog__filters-title.catalog__legend
+                  | Особенности:
+              div
+                .checkbox
+                  input.checkbox__input(type='checkbox', id='slider', checked)
+                  label.catalog__filters-selection.checkbox__label(for='slider')
+                    | Слайдер
+                .checkbox
+                  input.checkbox__input(type='checkbox', id='advantages')
+                  label.catalog__filters-selection.checkbox__label(for='advantages')
+                    | Блок преимуществ
+                .checkbox
+                  input.checkbox__input(type='checkbox', id='news', checked)
+                  label.catalog__filters-selection.checkbox__label(for='news')
+                    | Новости
+                .checkbox
+                  input.checkbox__input(type='checkbox', id='gallery')
+                  label.catalog__filters-selection.checkbox__label(for='gallery')
+                    | Галерея
+                .checkbox
+                  input.checkbox__input(type='checkbox', id='cart')
+                  label.catalog__filters-selection.checkbox__label(for='cart')
+                    | Корзина
+            button.catalog__filters-btn.btn.btn--gray(type='submit')
+              | Показать
+          .catalog__content
+            .catalog__sort
+              h3.catalog__legend
+                | Сортировать:
+              ul.catalog__sort-items
+                li.catalog__sort-item.catalog__sort-item--active
+                  button.catalog__sort-btn(type='button', tabindex='-1')
+                    | По цене
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button')
+                    | По типу
+                li.catalog__sort-item
+                  button.catalog__sort-btn(type='button')
+                    | По названию
+                li.catalog__sort-item.catalog__sort-item--active
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn.catalog__sort-btn--down(type='button', disabled)
+                    | Прямой порядок
+                li.catalog__sort-item
+                  button.catalog__sort-btn.catalog__sort-btn--arrow.catalog__sort-btn.catalog__sort-btn--up(type='button')
+                    | Обратный порядок
+            .catalog__items
+              .catalog__item
+                .catalog__item-img-wrapper
+                  img(src='img/site-sedona.jpg', width='360', height='576', alt='Sedona')
+                .catalog__item-content
+                  h3.catalog__item-title
+                    | Sedona
+                  p.catalog__item-desc
+                    | Информационный сайт для туристов
+                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                    | 9900 руб.
+              .catalog__item
+                .catalog__item-img-wrapper
+                  img(src='img/site-pink.jpg', width='360', height='576', alt='Pink app')
+                .catalog__item-content
+                  h3.catalog__item-title
+                    | Pink app
+                  p.catalog__item-desc
+                    | Продуктовый лендинг приложения для iOS и Android
+                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                    | 9900 руб.
+              .catalog__item
+                .catalog__item-img-wrapper
+                  img(src='img/site-barbershop.jpg', width='360', height='576', alt='Barbershop')
+                .catalog__item-content
+                  h3.catalog__item-title
+                    | Barbershop
+                  p.catalog__item-desc
+                    | Сайт салоны красоты. Для мужчин, да.
+                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                    | 9900 руб.
+              .catalog__item
+                .catalog__item-img-wrapper
+                  img(src='img/site-mishka.jpg', width='360', height='576', alt='Mishka')
+                .catalog__item-content
+                  h3.catalog__item-title
+                    | Mishka
+                  p.catalog__item-desc
+                    | Интернет-магазин вязаных игрушек
+                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                    | 9900 руб.
+              .catalog__item
+                .catalog__item-img-wrapper
+                  img(src='img/site-aplus.jpg', width='360', height='576', alt='A plus')
+                .catalog__item-content
+                  h3.catalog__item-title
+                    | A plus
+                  p.catalog__item-desc
+                    | Лендинг курсов повышения квалификации
+                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                    | 9900 руб.
+              .catalog__item
+                .catalog__item-img-wrapper
+                  img(src='img/site-kvast.jpg', width='360', height='576', alt='Кваст')
+                .catalog__item-content
+                  h3.catalog__item-title
+                    | Кваст
+                  p.catalog__item-desc
+                    | Промо-сайт производителя крафтового кваса
+                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                    | 9900 руб.
+            .catalog__nav
+              ul.catalog__nav-items
+                li.catalog__nav-item.catalog__nav-item--active
+                  button.catalog__nav-btn.btn.btn--gray(type='button', tabindex='-1')
+                    | 1
+                li.catalog__nav-item
+                  button.catalog__nav-btn.btn.btn--gray(type='button')
+                    | 2
+                li.catalog__nav-item
+                  button.catalog__nav-btn.btn.btn--gray(type='button')
+                    | 3
+              button.catalog__nav-next.btn.btn--gray(type='button')
+                | Следующая
+      include blocks/contacts.pug
+
+    include layouts/footer.pug
+    script(src='js/concatenated.js')

@@ -1,0 +1,39 @@
+section.contacts
+  .contacts__wrap
+    .contacts__content
+      h1.contacts__title
+        | Nёrds design studio
+      span.contacts__addr
+        | 191186, Санкт-Петербург,
+        br
+        | ул. Б. Конюшенная, д. 19/8
+      a.contacts__phone(href='tel:+78122757575')
+        | тел. +7 (812) 275-75-75
+      button.contacts__btn.btn(type='button')
+        | Напишите нам
+    .contacts__feedback.feedback
+      .feedback__header
+        h2.feedback__title
+          | Напишите нам
+        button.feedback__close(type='button')
+          | Закрыть
+      form.feedback__form
+        .feedback__items
+          .feedback__item-group
+            .feedback__item
+              label.feedback__label(for='name')
+                | Ваше имя:
+              input.feedback__field(id='name', placeholder='Представьтесь, пожалуйста', required)
+            .feedback__item
+              label.feedback__label(for='email')
+                | Ваш e-mail:
+              input.feedback__field(id='email', type='email', placeholder='Для отправки ответа', required)
+          .feedback__item
+            label.feedback__label(for='text')
+              | Текст письма:
+            textarea.feedback__field(id='text', placeholder='В свободной форме', required)
+        button.feedback__send.btn(type='submit')
+          | Отправить
+    .modal-overlay
+  .contacts__map
+    img(src='img/map.jpg', width='1440', height='416', alt='Карта')
