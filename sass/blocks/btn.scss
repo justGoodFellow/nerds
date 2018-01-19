@@ -32,8 +32,9 @@
   }
 
   &--gray {
-    color: black;
     width: 260px;
+
+    color: black;
 
     background-color: $gray--lighten;
     &:hover,
