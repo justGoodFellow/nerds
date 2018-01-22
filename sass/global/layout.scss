@@ -4,3 +4,8 @@ body {
   font-size: $font-size;
   font-family: $font-family;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}

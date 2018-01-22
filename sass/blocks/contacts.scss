@@ -44,19 +44,31 @@
 }
 .contacts__map {
   position: relative;
+
+  min-height: 416px;
   iframe {
     position: absolute;
     top: 0;
     left: 0;
 
     width: 100%;
+
+    border: none;
   }
 }
 .contacts__map-img-wrap {
   @include container--big;
 
+  min-height: 416px;
+
+  background-color: $gray;
+
   img {
+    display: block;
     width: 100%;
+    height: 416px;
+
+    background-color: $gray;
 
     object-fit: cover;
   }
@@ -166,11 +178,14 @@
     border-color: black;
     outline: none;
   }
-  // &:invalid {
-  //   color: $red;
-  //
-  //   border-color: $red;
-  // }
+  &:invalid {
+    border-color: $red;
+    &::placeholder {
+      color: $red--dark;
+
+      opacity: 1;
+    }
+  }
 }
 textarea.feedback__field {
   width: 100%;

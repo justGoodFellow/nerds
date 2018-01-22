@@ -3,7 +3,7 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     title
-      | Nerds
+      | Нёрдс
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     link(rel='stylesheet', href='css/style.min.css')
   body
@@ -35,7 +35,7 @@ html(lang='ru')
         .promo__wrapper
           .slider
             .slider__inner
-              .slider__item.promo__item
+              .slider__item.slider__item--active.promo__item
                 .slider__content
                   h2.promo__title
                     | Долго, дорого, скрупулезно.
@@ -60,7 +60,7 @@ html(lang='ru')
                   a.promo__btn.btn(href='#')
                     | Узнать больше
             .slider__controls
-              button.slider__control.slider__control--active(type='button', disabled)
+              button.slider__control(type='button', disabled)
                 span
                   | 1
               button.slider__control(type='button')
@@ -147,7 +147,7 @@ html(lang='ru')
       .examples
         .examples__wrapper
           .examples__items
-            a.examples__item(href='#')
+            a.examples__item(href='https://htmlacademy.ru/intensive/htmlcss')
               img(src='img/logo-htmlacademy.png', width='199', height='68', alt='Логотип сайта htmlacademy')
             a.examples__item(href='#')
               img(src='img/logo-borodinski.png', width='209', height='87', alt='Логотип сайта borodinski')
@@ -158,4 +158,4 @@ html(lang='ru')
       include blocks/contacts.pug
 
     include layouts/footer.pug
-    script(src='js/concatenated.js')
+    script(src='js/concatenated.min.js')

@@ -11,6 +11,7 @@
 }
 .page-header__logo {
   display: block;
+  width: 160px;
   &[href] {
     &:hover,
     &:focus {
@@ -22,6 +23,8 @@
   }
   img {
     display: block;
+    width: 160px;
+    height: 65px;
   }
 }
 
@@ -39,8 +42,13 @@
 
   list-style: none;
   &--main {
+    flex-wrap: wrap;
     justify-content: center;
     width: 840px;
+    max-width: 840px;
+  }
+  &--user {
+    flex-shrink: 0;
   }
 }
 .main-nav__item {

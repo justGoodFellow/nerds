@@ -28,6 +28,9 @@ form.addEventListener('submit', function (event) {
   if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
     event.preventDefault();
     feedback.classList.add('feedback--error');
+    feedbackName.setAttribute('required', 'required');
+    feedbackEmail.setAttribute('required', 'required');
+    feedbackText.setAttribute('required', 'required');
   } else {
     localStorage.setItem('name', feedbackName.value);
     localStorage.setItem('email', feedbackEmail.value);

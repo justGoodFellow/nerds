@@ -13,6 +13,7 @@
   position: relative;
 
   height: 430px;
+  overflow: hidden;
 }
 .slider__item {
   position: absolute;
@@ -24,11 +25,15 @@
   width: 1160px;
   height: 100%;
 
+  background-image: url(../img/slide-1.png);
   background-repeat: no-repeat;
   background-position: right bottom;
-  &:nth-child(1) {
-    display: block;
 
+  &--active {
+    display: block;
+  }
+
+  &:nth-child(1) {
     background-image: url(../img/slide-1.png);
   }
   &:nth-child(2) {

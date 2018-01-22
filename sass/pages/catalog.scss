@@ -48,7 +48,19 @@
 
 .radiobox__input,
 .checkbox__input {
-  display: none;
+  position: absolute;
+
+  opacity: 0;
+
+  &:focus ~ .radiobox__label,
+  &:focus ~ .checkbox__label {
+    color: black;
+
+    &::before,
+    &::after {
+      opacity: 1;
+    }
+  }
 
   &:disabled {
     & ~ .radiobox__label,
@@ -290,6 +302,10 @@
   img {
     display: block;
     box-sizing: border-box;
+    width: 360px;
+    height: 567px;
+
+    background-color: $gray--light;
   }
 }
 .catalog__item-content {
@@ -307,6 +323,10 @@
 .catalog__item-title {
   font-size: $font-size--large;
   text-transform: uppercase;
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 .catalog__item-desc {
   color: $gray--dark;

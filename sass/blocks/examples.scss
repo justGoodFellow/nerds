@@ -7,7 +7,6 @@
 .examples__items {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   padding-bottom: 40px;
 
   border-bottom: 2px solid $gray--lighten;
@@ -16,7 +15,11 @@
   position: relative;
 
   display: flex;
+  align-items: center;
   width: 260px;
+  min-height: 87px;
+
+  color: black;
   &::after {
     content: '';
     position: absolute;

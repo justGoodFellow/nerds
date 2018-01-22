@@ -3,7 +3,7 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     title
-      | Nerds
+      | Нёрдс
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     link(rel='stylesheet', href='css/style.min.css')
   body
@@ -127,60 +127,66 @@ html(lang='ru')
                   img(src='img/site-sedona.jpg', width='360', height='576', alt='Sedona')
                 .catalog__item-content
                   h3.catalog__item-title
-                    | Sedona
+                    a(href='#')
+                      | Sedona
                   p.catalog__item-desc
                     | Информационный сайт для туристов
-                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                  button.catalog__buy-btn.btn(type='button')
                     | 9900 руб.
               .catalog__item
                 .catalog__item-img-wrapper
                   img(src='img/site-pink.jpg', width='360', height='576', alt='Pink app')
                 .catalog__item-content
                   h3.catalog__item-title
-                    | Pink app
+                    a(href='#')
+                      | Pink app
                   p.catalog__item-desc
                     | Продуктовый лендинг приложения для iOS и Android
-                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                  button.catalog__buy-btn.btn(type='button')
                     | 9900 руб.
               .catalog__item
                 .catalog__item-img-wrapper
                   img(src='img/site-barbershop.jpg', width='360', height='576', alt='Barbershop')
                 .catalog__item-content
                   h3.catalog__item-title
-                    | Barbershop
+                    a(href='#')
+                      | Barbershop
                   p.catalog__item-desc
                     | Сайт салоны красоты. Для мужчин, да.
-                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                  button.catalog__buy-btn.btn(type='button')
                     | 9900 руб.
               .catalog__item
                 .catalog__item-img-wrapper
                   img(src='img/site-mishka.jpg', width='360', height='576', alt='Mishka')
                 .catalog__item-content
                   h3.catalog__item-title
-                    | Mishka
+                    a(href='#')
+                      | Mishka
                   p.catalog__item-desc
                     | Интернет-магазин вязаных игрушек
-                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                  button.catalog__buy-btn.btn(type='button')
                     | 9900 руб.
               .catalog__item
                 .catalog__item-img-wrapper
                   img(src='img/site-aplus.jpg', width='360', height='576', alt='A plus')
                 .catalog__item-content
                   h3.catalog__item-title
-                    | A plus
+                    a(href='#')
+                      | A plus
                   p.catalog__item-desc
                     | Лендинг курсов повышения квалификации
-                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                  button.catalog__buy-btn.btn(type='button')
                     | 9900 руб.
               .catalog__item
                 .catalog__item-img-wrapper
                   img(src='img/site-kvast.jpg', width='360', height='576', alt='Кваст')
                 .catalog__item-content
                   h3.catalog__item-title
-                    | Кваст
+                    a(href='#')
+                      | Кваст
                   p.catalog__item-desc
                     | Промо-сайт производителя крафтового кваса
-                  button.catalog__buy-btn.btn(type='button', tabindex='-1')
+                  button.catalog__buy-btn.btn(type='button')
                     | 9900 руб.
             .catalog__nav
               ul.catalog__nav-items
@@ -198,4 +204,4 @@ html(lang='ru')
       include blocks/contacts.pug
 
     include layouts/footer.pug
-    script(src='js/concatenated.js')
+    script(src='js/concatenated.min.js')

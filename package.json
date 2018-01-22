@@ -1,5 +1,6 @@
 {
   "name": "nerds",
+  "description": "Учебный проект - Нёрдс",
   "main": "templates/index.pug",
   "repository": "git@github.com:justGoodFellow/nerds.git",
   "author": "Sergey Bodnaryuk <bodnaryuk_s.a@hotmail.com>",
