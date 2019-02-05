@@ -24,6 +24,7 @@
     background-color: $red--dark;
     outline: none;
   }
+
   &:active {
     color: rgba(white, 0.3);
 
@@ -37,10 +38,12 @@
     color: black;
 
     background-color: $gray--lighten;
+
     &:hover,
     &:focus {
       background-color: $gray--light;
     }
+
     &:active {
       color: rgba(black, 0.3);
 

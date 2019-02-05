@@ -2,9 +2,11 @@
   margin-top: 40px;
   margin-bottom: 50px;
 }
+
 .info__wrapper {
   @include container;
 }
+
 .info__inner {
   display: flex;
   justify-content: space-between;
@@ -12,9 +14,11 @@
 
   border-bottom: 2px solid $gray--lighten;
 }
+
 .info__about-us {
   width: 660px;
 }
+
 .info__title {
   margin-top: 30px;
 
@@ -22,13 +26,16 @@
   font-size: $font-size--x-large;
   line-height: $line-height--large;
 }
+
 .info__desc {
   line-height: $line-height;
   color: $color-main;
 }
+
 .info__work {
   margin-top: 35px;
 }
+
 .info__work-title {
   margin-bottom: 25px;
 
@@ -36,6 +43,7 @@
   line-height: $line-height;
   text-transform: uppercase;
 }
+
 .info__work-items {
   padding: 0;
 
@@ -43,11 +51,13 @@
   line-height: $line-height;
   color: $color-main;
 }
+
 .info__work-item {
   position: relative;
 
   margin: 25px 0;
   padding-left: 35px;
+
   &::before {
     content: '';
     position: absolute;
@@ -61,17 +71,21 @@
     background-color: $red;
   }
 }
+
 .info__features {
   width: 360px;
 }
+
 .info__logo {
   margin-bottom: 35px;
+
   img {
     display: block;
     width: 360px;
     height: 208px;
   }
 }
+
 .info__features-desc {
   display: block;
 
@@ -80,13 +94,16 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .info__features-items {
   display: flex;
   margin-top: 40px;
 }
+
 .info__features-item {
   margin-right: 20px;
 }
+
 .info__features-item-number {
   display: block;
   margin-bottom: 20px;
@@ -94,10 +111,12 @@
   font-weight: bold;
   font-size: 45px;
   line-height: 45px;
+
   sup {
     font-size: 30px;
   }
 }
+
 .info__features-item-desc {
   display: block;
 
