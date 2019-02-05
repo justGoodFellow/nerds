@@ -29,10 +29,12 @@ html(lang='ru')
       section.promo
         .promo__wrapper
           .slider
-            .slider__inner
+            h2.visually-hidden
+              | Главное
+            .slider__items
               .slider__item.slider__item--active.promo__item
                 .slider__content
-                  h2.promo__title
+                  h3.promo__title
                     | Долго, дорого, скрупулезно.
                   p.promo__desc
                     | Математически выверенный дизайн для вашего сайта или мобильного приложения.
@@ -40,7 +42,7 @@ html(lang='ru')
                     | Узнать больше
               .slider__item.promo__item
                 .slider__content
-                  h2.promo__title
+                  h3.promo__title
                     | Любим математику как никто другой
                   p.promo__desc
                     | Никакого креатива, только математические формулы для расчета идеальных пропорций.
@@ -48,7 +50,7 @@ html(lang='ru')
                     | Узнать больше
               .slider__item.promo__item
                 .slider__content
-                  h2.promo__title
+                  h3.promo__title
                     | Только ночь, только хардкор
                   p.promo__desc
                     | Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
@@ -66,11 +68,13 @@ html(lang='ru')
                   | 3
       section.services
         .services__wrapper
+          h2.visually-hidden
+            | Услуги
           .services__items
             .services__item
               .services__img-wrap
                 img(src='img/services-1.png', width='300', height='146', alt='Веб-сайты')
-              h2.services__title
+              h3.services__title
                 | Веб-сайты
               p.services__desc
                 | Мир никогда не будет прежним после того как увидит ваш сайт!
@@ -79,7 +83,7 @@ html(lang='ru')
             .services__item
               .services__img-wrap
                 img(src='img/services-2.png', width='300', height='146', alt='Приложения')
-              h2.services__title
+              h3.services__title
                 | Приложения
               p.services__desc
                 | Покорите топ-10 приложений в AppStore и Google Play
@@ -88,7 +92,7 @@ html(lang='ru')
             .services__item
               .services__img-wrap
                 img(src='img/services-3.png', width='300', height='146', alt='Презентации')
-              h2.services__title
+              h3.services__title
                 | Презентации
               p.services__desc
                 | Вы даже не подозреваете, насколько вы изумительны!
@@ -141,6 +145,8 @@ html(lang='ru')
                     | Минимальная предоплата
       .examples
         .examples__wrapper
+          h2.visually-hidden
+            | Примеры
           .examples__items
             a.examples__item(href='https://htmlacademy.ru/intensive/htmlcss')
               img(src='img/logo-htmlacademy.png', width='199', height='68', alt='Логотип сайта htmlacademy')
