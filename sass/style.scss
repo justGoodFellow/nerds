@@ -1,10 +1,10 @@
 @import 'normalize.scss';
 @import 'variables.scss';
 @import 'mixins.scss';
-
+//
 @import 'global/fonts.scss';
-@import 'global/layout.scss';
-
+@import 'global/base.scss';
+//
 @import 'blocks/btn.scss';
 @import 'blocks/range-filter.scss';
 @import 'blocks/page-header.scss';
@@ -16,3 +16,4 @@
 @import 'blocks/page-footer.scss';
 
 @import 'pages/catalog.scss';
+//

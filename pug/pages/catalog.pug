@@ -1,11 +1,6 @@
 doctype html
 html(lang='ru')
-  head
-    meta(charset='utf-8')
-    title
-      | Нёрдс
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    link(rel='stylesheet', href='css/style.min.css')
+  include ../layouts/head.pug
   body
     header.page-header
       .page-header__wrapper
@@ -201,7 +196,7 @@ html(lang='ru')
                     | 3
               button.catalog__nav-next.btn.btn--gray(type='button')
                 | Следующая
-      include blocks/contacts.pug
+      include ../blocks/contacts.pug
 
-    include layouts/footer.pug
+    include ../layouts/footer.pug
     script(src='js/concatenated.min.js')
