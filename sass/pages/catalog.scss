@@ -24,25 +24,8 @@
   justify-content: space-between;
 }
 
-.catalog__filters {
+.catalog__filters-form {
   width: 260px;
-}
-
-.catalog__filters-group {
-  margin: 0;
-  margin-bottom: 15px;
-  padding: 0;
-
-  border: none;
-}
-
-.catalog__filters-title {
-  margin-bottom: 5px;
-  padding-top: 18px;
-
-  font-weight: bold;
-  font-size: $font-size--large;
-  text-transform: uppercase;
 }
 
 .catalog__legend {
@@ -52,186 +35,25 @@
   text-transform: uppercase;
 }
 
-.catalog__filters-cost {
-  margin-top: 50px;
-  margin-bottom: 25px;
-}
-
-.catalog__filters-btn {
-  margin-top: 15px;
-}
-
-.radiobox__input,
-.checkbox__input {
-  position: absolute;
-
-  opacity: 0;
-
-  &:focus ~ .radiobox__label,
-  &:focus ~ .checkbox__label {
-    color: black;
-
-    &::before,
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &:disabled {
-    & ~ .radiobox__label,
-    & ~ .checkbox__label {
-      color: black;
-
-      cursor: default;
-      opacity: 0.3;
-
-      &::before {
-        border-color: $gray--darken;
-        opacity: 0.3;
-      }
-
-      &::after {
-        opacity: 0.3;
-      }
-    }
-  }
-
-  &:checked ~ .catalog__filters-selection {
-    &::after {
-      display: block;
-    }
-  }
-}
-
-.checkbox__input {
-  &:checked ~ .catalog__filters-selection {
-    &::before {
-      border-color: transparent;
-    }
-  }
-}
-
-.radiobox__label,
-.checkbox__label {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  margin: 15px 0;
-
-  color: $color-main;
-
-  cursor: pointer;
-
-  &::before,
-  &::after {
-    opacity: 0.4;
-  }
-
-  &::before {
-    content: '';
-
-    display: block;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-
-    border-style: solid;
-    border-color: $gray--darken;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-
-    display: none;
-  }
-
-  &:hover {
-    color: black;
-
-    &::before,
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.radiobox__label {
-  &::before {
-    border-width: 3px;
-    border-radius: 50%;
-  }
-
-  &::after {
-    top: 8px;
-    left: 8px;
-
-    width: 8px;
-    height: 8px;
-
-    background-color: $gray--darken;
-    border-radius: 50%;
-  }
-
-  &:hover {
-    &::after {
-      background-color: $gray--darken;
-    }
-  }
-}
-
-.checkbox__label {
-  margin: 18px 0;
-
-  &::before {
-    width: 23px;
-    height: 22px;
-
-    border-width: 2px;
-    border-radius: 4px;
-  }
-
-  &::after {
-    top: 0;
-    left: 0;
-
-    width: 27px;
-    height: 23px;
-
-    background-image: url('../img/spritesheet.png');
-    background-repeat: no-repeat;
-    background-position: -10px -45px;
-  }
-}
-
 .catalog__col-right {
   width: 760px;
   margin-bottom: 45px;
 }
 
-.catalog__sort {
+.catalog__sorting {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 35px;
 }
 
-.catalog__sort-items {
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+.sorting-menu,
+.order-menu {
+  @include list-reset;
 }
 
-.catalog__sort-item {
+.sorting-menu__item,
+.order-menu__item {
   display: flex;
   align-items: center;
   margin: 0 8px;
@@ -241,7 +63,8 @@
   }
 
   &--active {
-    .catalog__sort-btn {
+    .sorting-menu__btn,
+    .order-menu__btn {
       cursor: auto;
       opacity: 1;
 
@@ -253,14 +76,19 @@
   }
 }
 
-.catalog__sort-btn {
+.sorting-menu__btn,
+.order-menu__btn {
   font-size: 14px;
+  color: black;
   text-transform: uppercase;
+  text-decoration: none;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
   opacity: 0.3;
+
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -271,18 +99,18 @@
   &:active {
     opacity: 1;
   }
+}
 
-  &--arrow {
-    width: 0;
-    height: 0;
-    padding: 0;
+.order-menu__btn {
+  width: 0;
+  height: 0;
+  padding: 0;
 
-    font-size: 0;
+  font-size: 0;
 
-    border-width: 9px 4.5px 0 4.5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-  }
+  border-width: 9px 4.5px 0 4.5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 
   &--up {
     transform: rotate(180deg);
@@ -382,36 +210,5 @@
 }
 
 .catalog__nav {
-  display: flex;
   margin: 15px 0;
-}
-
-.catalog__nav-items {
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.catalog__nav-item {
-  &--active {
-    .catalog__nav-btn {
-      background-color: white;
-      border: 3px solid $gray--light;
-      box-shadow: none;
-      cursor: auto;
-
-      &:active {
-        color: black;
-      }
-    }
-  }
-}
-
-.catalog__nav-btn {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  padding: 0;
 }

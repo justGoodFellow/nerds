@@ -1,0 +1,25 @@
+.filters-form__group {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+
+  border: none;
+}
+
+.filters-form__title {
+  margin-bottom: 5px;
+  padding-top: 18px;
+
+  font-weight: bold;
+  font-size: $font-size--large;
+  text-transform: uppercase;
+}
+
+.filters-form__range-filter {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.filters-form__submit {
+  margin-top: 15px;
+}

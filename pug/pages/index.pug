@@ -1,11 +1,12 @@
 doctype html
 html(lang='ru')
   include ../layouts/head.pug
+
   body
     header.page-header
       .page-header__wrapper
         a.page-header__logo
-          img(src='img/logo.png', width='160', height='65', alt='Логотип')
+          img(src='img/logo.png' width='160' height='65' alt='Логотип')
         nav.main-nav
           ul.main-nav__items.main-nav__items--main
             li.main-nav__item
@@ -24,7 +25,6 @@ html(lang='ru')
             li.main-nav__item
               a.main-nav__link.main-nav__link--cart(href='#')
                 | Корзина
-
     main
       section.promo
         .promo__wrapper
@@ -37,7 +37,8 @@ html(lang='ru')
                   h3.promo__title
                     | Долго, дорого, скрупулезно.
                   p.promo__desc
-                    | Математически выверенный дизайн для вашего сайта или мобильного приложения.
+                    | Математически выверенный дизайн для вашего сайта или
+                    | мобильного приложения.
                   a.promo__btn.btn(href='#')
                     | Узнать больше
               .slider__item.promo__item
@@ -45,7 +46,8 @@ html(lang='ru')
                   h3.promo__title
                     | Любим математику как никто другой
                   p.promo__desc
-                    | Никакого креатива, только математические формулы для расчета идеальных пропорций.
+                    | Никакого креатива, только математические формулы для
+                    | расчета идеальных пропорций.
                   a.promo__btn.btn(href='#')
                     | Узнать больше
               .slider__item.promo__item
@@ -53,11 +55,12 @@ html(lang='ru')
                   h3.promo__title
                     | Только ночь, только хардкор
                   p.promo__desc
-                    | Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+                    | Работать днем, как все? Мы против этого. Ближе к
+                    | полуночи работа только начинается.
                   a.promo__btn.btn(href='#')
                     | Узнать больше
             .slider__controls
-              button.slider__control(type='button', disabled)
+              button.slider__control(type='button' disabled)
                 span
                   | 1
               button.slider__control(type='button')
@@ -66,97 +69,10 @@ html(lang='ru')
               button.slider__control(type='button')
                 span
                   | 3
-      section.services
-        .services__wrapper
-          h2.visually-hidden
-            | Услуги
-          .services__items
-            .services__item
-              .services__img-wrap
-                img(src='img/services-1.png', width='300', height='146', alt='Веб-сайты')
-              h3.services__title
-                | Веб-сайты
-              p.services__desc
-                | Мир никогда не будет прежним после того как увидит ваш сайт!
-              a.services__btn.btn(href='#')
-                | Заказать
-            .services__item
-              .services__img-wrap
-                img(src='img/services-2.png', width='300', height='146', alt='Приложения')
-              h3.services__title
-                | Приложения
-              p.services__desc
-                | Покорите топ-10 приложений в AppStore и Google Play
-              a.services__btn.services__btn--green.btn(href='#')
-                | Заказать
-            .services__item
-              .services__img-wrap
-                img(src='img/services-3.png', width='300', height='146', alt='Презентации')
-              h3.services__title
-                | Презентации
-              p.services__desc
-                | Вы даже не подозреваете, насколько вы изумительны!
-              a.services__btn.services__btn--yellow.btn(href='#')
-                | Заказать
-      section.info
-        .info__wrapper
-          .info__inner
-            .info__about-us
-              h2.info__title
-                | Мы — маленькая, но гордая дизайн-студия из Краснодара.
-              p.info__desc
-                | Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
-              .info__work
-                h3.info__work-title
-                  | Выполняем заказы на разработку:
-                ul.info__work-items
-                  li.info__work-item
-                    | Веб-сайтов любой сложности
-                  li.info__work-item
-                    | Мобильных приложений для iOS и Android
-                  li.info__work-item
-                    | Слайдшоу и видео для корпоративных презентаций
-            .info__features
-              .info__logo
-                img(src='img/logo-2.png', width='360', height='208', alt='Логотип')
-              span.info__features-desc
-                | С 2004 года любим точность во всем:
-              .info__features-items
-                .info__features-item
-                  span.info__features-item-number
-                    | 146
-                    sup
-                      | %
-                  span.info__features-item-desc
-                    | Уровень самоотдачи
-                .info__features-item
-                  span.info__features-item-number
-                    | 100
-                    sup
-                      | %
-                  span.info__features-item-desc
-                    | Соблюдение сроков
-                .info__features-item
-                  span.info__features-item-number
-                    | 50
-                    sup
-                      | %
-                  span.info__features-item-desc
-                    | Минимальная предоплата
-      .examples
-        .examples__wrapper
-          h2.visually-hidden
-            | Примеры
-          .examples__items
-            a.examples__item(href='https://htmlacademy.ru/intensive/htmlcss')
-              img(src='img/logo-htmlacademy.png', width='199', height='68', alt='Логотип сайта htmlacademy')
-            a.examples__item(href='#')
-              img(src='img/logo-borodinski.png', width='209', height='87', alt='Логотип сайта borodinski')
-            a.examples__item(href='#')
-              img(src='img/logo-pink.png', width='185', height='52', alt='Логотип сайта pink')
-            a.examples__item(href='#')
-              img(src='img/logo-mishka.png', width='173', height='84', alt='Логотип сайта mishka')
-      include ../blocks/contacts.pug
 
+      include ../blocks/services.pug
+      include ../blocks/info.pug
+      include ../blocks/examples.pug
+      include ../blocks/contacts.pug
     include ../layouts/footer.pug
     script(src='js/concatenated.min.js')
