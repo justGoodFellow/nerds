@@ -19,9 +19,9 @@
   "browserslist": [
     "> 0.5% in RU",
     "last 2 versions",
-    "IE 11",
-    "iOS >= 10.3",
-    "not dead"
+    "not dead",
+    "ie 11",
+    "iOS >= 10.3"
   ],
   "editorconfig-cli": [
     "*.js",
@@ -36,6 +36,7 @@
     "autoprefixer": "^10.4.8",
     "browser-sync": "^2.27.10",
     "css-mqpacker": "^7.0.0",
+    "del": "^6.1.1",
     "eslint": "^8.21.0",
     "eslint-config-htmlacademy": "^6.0.0",
     "gulp": "^4.0.2",
@@ -57,6 +58,5 @@
     "stylelint-config-htmlacademy": "^0.1.12"
   },
   "dependencies": {
-    "del": "^6.1.1"
   }
 }

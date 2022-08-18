@@ -58,15 +58,9 @@
   &::before {
     content: '';
 
-    display: block;
     flex-shrink: 0;
     box-sizing: border-box;
-    width: 24px;
-    height: 24px;
     margin-right: 10px;
-
-    border-style: solid;
-    border-color: $gray--darken;
   }
 
   &::after {
@@ -88,7 +82,13 @@
 
 .inputbox--radio .inputbox__label {
   &::before {
+    display: block;
+    width: 24px;
+    height: 24px;
+
     border-width: 3px;
+    border-style: solid;
+    border-color: $gray--darken;
     border-radius: 50%;
   }
 
@@ -116,10 +116,9 @@
 
     &::before {
       width: 23px;
-      height: 22px;
+      height: 23px;
 
-      border-width: 2px;
-      border-radius: 4px;
+      background-image: url('../img/icon-chekbox-off.png');
     }
 
     &::after {
@@ -138,7 +137,7 @@
   .inputbox__input {
     &:checked ~ .inputbox__label {
       &::before {
-        border-color: transparent;
+        background-image: none;
       }
     }
   }
