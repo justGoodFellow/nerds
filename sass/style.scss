@@ -1,7 +1,8 @@
-@import 'normalize.scss';
-@import 'variables.scss';
-@import 'mixins.scss';
+@import 'helpers/variables.scss';
+@import 'helpers/mixins.scss';
+@import 'helpers/animations.scss';
 //
+@import 'global/normalize.scss';
 @import 'global/fonts.scss';
 @import 'global/base.scss';
 //
