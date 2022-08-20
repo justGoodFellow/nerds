@@ -50,6 +50,10 @@
   text-transform: uppercase;
   text-decoration: none;
 
+  transition: 0.3s ease;
+
+  user-select: none;
+
   &--cart {
     padding-right: 0;
 

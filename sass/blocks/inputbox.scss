@@ -53,6 +53,8 @@
   &::before,
   &::after {
     opacity: 0.4;
+
+    transition: 0.3s ease;
   }
 
   &::before {

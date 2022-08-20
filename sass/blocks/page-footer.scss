@@ -34,6 +34,8 @@
   background-color: $gray--lighten;
   border-radius: 50%;
 
+  transition: 0.3s ease;
+
   &:hover,
   &:focus {
     background-color: $red--dark;
