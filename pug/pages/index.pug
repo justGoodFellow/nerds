@@ -2,12 +2,12 @@ doctype html
 html(lang='ru')
   include ../layouts/head.pug
 
-  body
+  body.index
     header.page-header
       .page-header__wrapper
         a.page-header__logo
           img(src='img/logo.png' width='160' height='65' alt='Логотип')
-        nav.main-nav
+        nav.page-header__main-nav.main-nav
           ul.main-nav__items.main-nav__items--main
             li.main-nav__item
               a.main-nav__link(href='#')
@@ -26,50 +26,7 @@ html(lang='ru')
               a.main-nav__link.main-nav__link--cart(href='#')
                 | Корзина
     main
-      section.promo
-        .promo__wrapper
-          .slider
-            h2.visually-hidden
-              | Главное
-            .slider__items
-              .slider__item.slider__item--active.promo__item
-                .slider__content
-                  h3.promo__title
-                    | Долго, дорого, скрупулезно.
-                  p.promo__desc
-                    | Математически выверенный дизайн для вашего сайта или
-                    | мобильного приложения.
-                  a.promo__btn.btn(href='#')
-                    | Узнать больше
-              .slider__item.promo__item
-                .slider__content
-                  h3.promo__title
-                    | Любим математику как никто другой
-                  p.promo__desc
-                    | Никакого креатива, только математические формулы для
-                    | расчета идеальных пропорций.
-                  a.promo__btn.btn(href='#')
-                    | Узнать больше
-              .slider__item.promo__item
-                .slider__content
-                  h3.promo__title
-                    | Только ночь, только хардкор
-                  p.promo__desc
-                    | Работать днем, как все? Мы против этого. Ближе к
-                    | полуночи работа только начинается.
-                  a.promo__btn.btn(href='#')
-                    | Узнать больше
-            .slider__controls
-              button.slider__control(type='button' disabled)
-                span
-                  | 1
-              button.slider__control(type='button')
-                span
-                  | 2
-              button.slider__control(type='button')
-                span
-                  | 3
-
+      include ../blocks/promo.pug
       include ../blocks/services.pug
       include ../blocks/info.pug
       include ../blocks/examples.pug
